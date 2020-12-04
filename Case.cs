@@ -15,6 +15,7 @@ namespace Dames {
         public int Etat  {get { return etat; }}
         public int X { get { return x;}}
         public int Y { get { return y;}}
+
         public bool Occuper(int i, int j){
             if(this.etat == 1){
                  return true;
