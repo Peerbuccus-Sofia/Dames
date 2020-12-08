@@ -17,12 +17,7 @@ namespace Dames {
         public int Y { get { return y;}}
 
         public bool Occuper(int i, int j){
-            if(this.etat == 1){
-                 return true;
-            }
-            else {
-                return false;
-            }
+            return (this.etat == 1) ? true : false;
         }
         
 

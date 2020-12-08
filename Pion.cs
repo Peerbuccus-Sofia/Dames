@@ -6,20 +6,15 @@ namespace Dames {
     class Pion{
 
         private int etat = 1;
-        private int nb_noir = 20;
-        private int nb_blanc = 20 ;
         private char couleur;
 
-        public int Nbnoir { get {return nb_noir;}}
-        public int Nbblanc { get {return nb_blanc;}}
+        public Pion(int etatp, char couleurp){
+            etat = etatp;
+            couleur = couleurp;
+        }
+        public char Couleur { get { return couleur;}  set { couleur = value;} }
 
-        public char Couleur { get {return couleur;}}
-
-        public int Etat { get {return etat;}}
-
-        // public bool PeutManger(){
-        //     return true;
-        // }
+        public int Etat { get {return etat;} set{ etat = value;} }
         
         
         public bool EstMange(){
@@ -35,9 +30,6 @@ namespace Dames {
             }
         }
 
-        public void LesPions(){
-            Plateau pl = new Plateau();
-        }
 
         // partie de yohann 
 
@@ -45,7 +37,7 @@ namespace Dames {
 		public enum Case { XXXX, rien, pion, test, Dame }
 		Regex numSeul = new Regex(@"^[1-4]$");
 		public Case type;
-		public Joueur Joueur;
+	//	public Joueur Joueur;
 		//public Position Pos;
 
 		//Constructeurs

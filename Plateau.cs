@@ -8,6 +8,7 @@ namespace Dames {
         private char[,] plateau = new char[10,10];
 
         public void Damier(){
+            Partie partie = new Partie();
             for(int i=0; i<this.plateau.GetLength(0); i++)// parcours chaque ligne
             { 
                 if(i==0)
@@ -27,14 +28,38 @@ namespace Dames {
                         Console.Write(' '); 
                     }
                     if(j%2 == 0 && i%2 == 0){
-                        Console.BackgroundColor = ConsoleColor.White; 
+                        Console.BackgroundColor = ConsoleColor.White;  
                         Console.ForegroundColor = ConsoleColor.Black; 
-                        Console.Write(' ');  
+                        if(partie.Initialiser().Equals(true)){
+                            if( i<4){
+                                Console.ForegroundColor = ConsoleColor.Red; 
+                                Console.Write('O');  
+                            } 
+                            else if (i>=6){
+                                Console.ForegroundColor = ConsoleColor.Blue; 
+                                Console.Write('O');  
+                            }
+                            else { 
+                                Console.Write(' '); 
+                            }
+                        }
                     }
                     else if(i%2 != 0 && j%2 != 0){
                         Console.BackgroundColor = ConsoleColor.White; 
                         Console.ForegroundColor = ConsoleColor.Black; 
-                        Console.Write(' ');  
+                        if(partie.Initialiser().Equals(true)){
+                            if( i<4){
+                            Console.ForegroundColor = ConsoleColor.Red; 
+                            Console.Write('O');  
+                            } 
+                            else if (i>6){
+                                Console.ForegroundColor = ConsoleColor.Blue; 
+                                Console.Write('O');  
+                            }
+                            else { 
+                                Console.Write(' '); 
+                            }
+                        }    
                     }
                     else {
                         Console.ForegroundColor = ConsoleColor.White;
