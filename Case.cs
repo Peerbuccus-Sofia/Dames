@@ -7,9 +7,10 @@ namespace Dames {
         private int x;
         private int y;
 
-        public Case (int xp, int yp){
+        public Case (int etatp, int xp, int yp){
             x = xp;
             y = yp;
+            etat = etatp;
         }
 
         public int Etat  {get { return etat; }}
