@@ -17,13 +17,12 @@ namespace Dames {
         public int Etat { get {return etat;} set{ etat = value;} }
         
         
+        //renvoie vrai si le pion est mangé.
         public bool EstMange(){
-            if(this.etat == 0){
-                return true;
-            }
-            else { return false; }
+            return this.etat == 0 ? true : false;  
         }
 
+        //change l'etat du pion au moment où il se fait manger.
         public void PionManger(){
             if(this.EstMange() == true){
                 etat = 0;

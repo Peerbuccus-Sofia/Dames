@@ -11,7 +11,7 @@ namespace Dames {
             x = xp;
             y = yp;
             etat = etatp;
-        }
+        } 
 
         public int Etat  {get { return etat; }}
         public int X { get { return x;}}
