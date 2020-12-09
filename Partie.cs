@@ -27,9 +27,9 @@ namespace Dames {
                 if(rep == "oui"){
                     this.initialiser = 1;
                     //Console.Write(Initialiser());
-                    Plateau damier = new Plateau();
-                    Console.WriteLine("Commencer une partie ! ");
-                    damier.Damier();
+                    // Plateau damier = new Plateau();
+                    // Console.WriteLine("Commencer une partie ! ");
+                    // damier.Damier();
                 }        
                 return rep;
             }

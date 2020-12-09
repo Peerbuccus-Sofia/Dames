@@ -4,7 +4,6 @@ namespace Dames {
     class Joueur{
         private char joueur = 'O';
    
-
         public void Joueurs(char joueur){
             this.joueur = joueur;
         }
@@ -14,6 +13,17 @@ namespace Dames {
             set { joueur = value;}
         }
 
+        public char PlayerRed(){
+            char rouge = 'O';
+            Console.ForegroundColor = ConsoleColor.Red;
+            return rouge;
+        }
+
+        public char PlayerBlue(){
+            char bleu = 'O';
+            Console.ForegroundColor = ConsoleColor.Blue;
+            return bleu;
+        }
         //changer la couleur du joueur        
         public void changerjoueur(){ 
             if(this.joueur.Equals(ConsoleColor.Blue)){
@@ -23,6 +33,10 @@ namespace Dames {
                 Console.ForegroundColor = ConsoleColor.Blue;
             }
         }
+
+        
+
+       
 
         
 

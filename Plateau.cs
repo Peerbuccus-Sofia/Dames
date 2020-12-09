@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dames {
     class Plateau {
-        private char[,] plateau = new char[10,10];
+        public char[,] plateau = new char[10,10];
 
         public void Damier(){
             Partie partie = new Partie();
