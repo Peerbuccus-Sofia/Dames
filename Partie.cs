@@ -26,7 +26,7 @@ namespace Dames {
             try {
                 if(rep == "oui"){
                     this.initialiser = 1;
-                    Console.Write(Initialiser());
+                    //Console.Write(Initialiser());
                     Plateau damier = new Plateau();
                     Console.WriteLine("Commencer une partie ! ");
                     damier.Damier();

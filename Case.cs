@@ -17,7 +17,7 @@ namespace Dames {
         public int X { get { return x;}}
         public int Y { get { return y;}}
 
-        public bool Occuper(int i, int j){
+        public bool Occuper(){
             return (this.etat == 1) ? true : false;
         }
         

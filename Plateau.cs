@@ -9,7 +9,7 @@ namespace Dames {
 
         public void Damier(){
             Partie partie = new Partie();
-            Console.WriteLine(partie.Initialiser());
+            //Console.WriteLine(partie.Initialiser());
             for(int i=0; i<this.plateau.GetLength(0); i++)// parcours chaque ligne
             { 
                 if(i==0)
@@ -31,7 +31,7 @@ namespace Dames {
                     if(j%2 == 0 && i%2 == 0){
                         Console.BackgroundColor = ConsoleColor.White;  
                         Console.ForegroundColor = ConsoleColor.Black;
-                        if(partie.Initialiser().Equals(true)){
+                        if(partie.Initialiser().Equals(false)){
                             if(i<4){
                                 Console.ForegroundColor = ConsoleColor.Red; 
                                 Console.Write("O");  
@@ -51,7 +51,7 @@ namespace Dames {
                     else if(i%2 != 0 && j%2 != 0){
                         Console.BackgroundColor = ConsoleColor.White; 
                         Console.ForegroundColor = ConsoleColor.Black; 
-                        if(partie.Initialiser().Equals(true)){
+                        if(partie.Initialiser().Equals(false)){
                             if( i<4){
                             Console.ForegroundColor = ConsoleColor.Red; 
                             Console.Write('O');  
