@@ -2,12 +2,23 @@ using System;
 
 namespace Dames {
     class Partie{
+
         private int initialiser = 0;
-        public void partie(){
-        }
-        public void LaPartie(int init){
+        private static Partie instance = null;
+        static Plateau plateau = Plateau.getInstance();
+
+        Joueur joueur = new Joueur();
+
+        private void partie(int init){
             this.initialiser = init;
         }
+         public static Partie getInstance(){
+            if(instance==null){
+                instance = new Partie();
+            }
+            return instance;
+        } 
+        
 
         public int init{ 
             get { return this.initialiser;} 
@@ -26,10 +37,9 @@ namespace Dames {
             try {
                 if(rep == "oui"){
                     this.initialiser = 1;
-                    //Console.Write(Initialiser());
-                    // Plateau damier = new Plateau();
-                    // Console.WriteLine("Commencer une partie ! ");
-                    // damier.Damier();
+                    Plateau damier = new Plateau();
+                    Console.WriteLine("Commencer une partie ! ");
+                    damier.AfficherDamier(this);
                 }        
                 return rep;
             }

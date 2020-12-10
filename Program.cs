@@ -6,27 +6,20 @@ namespace Dames
     {
         static void Main(string[] args)
         {
-
-            Plateau damier = new Plateau();
-            Partie jeu = new Partie();
+            Partie jeu = Partie.getInstance();
+            Plateau plateau = Plateau.getInstance();
             Joueur joueur = new Joueur();
             Deplacement deplacement = new Deplacement();
-            Case lacase = new Case();
+            Pion pion = new Pion();
 
-            // do {
-                if(jeu.Ready()== "oui"){
-                     Console.WriteLine("Commencer une partie ! ");
-                    damier.Damier();
+            
+                jeu.Ready();
+                do {
                     joueur.changerjoueur();
                     Console.WriteLine($"C'est au tour du joueur {joueur.Player} de jouer");
-                    Console.ResetColor();
-                    deplacement.selectPion(joueur,lacase,damier);
-                }
-               
-                
-                //damier.plateau[ligne,colonne] 
-            // }
-            // while();
+                    deplacement.selectPion(joueur); 
+                    plateau.AfficherDamier(jeu);
+                }while(true);
             
         }
     }

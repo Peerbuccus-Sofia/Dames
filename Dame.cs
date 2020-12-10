@@ -1,7 +1,8 @@
 using System; 
 
 namespace Dames {
-    class Dames{
+    class Dames : Pion
+	{
         //fonctions 
         Joueur joueur = new Joueur();
 		public bool DevenirDame(Pion[,] pla)

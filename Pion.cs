@@ -16,7 +16,9 @@ namespace Dames {
 
         public int Etat { get {return etat;} set{ etat = value;} }
         
-        
+        public char unPion(){
+            return 'O';
+        }
         //renvoie vrai si le pion est mangé.
         public bool EstMange(){
             return this.etat == 0 ? true : false;  
@@ -30,7 +32,7 @@ namespace Dames {
         }
 
 
-        // partie de yohann 
+        // partie de yoann 
 
         //les variables 
 		public enum Case { XXXX, rien, pion, test, Dame }
