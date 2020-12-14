@@ -1,5 +1,4 @@
 using System; 
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace Dames {
@@ -16,9 +15,7 @@ namespace Dames {
 
         public int Etat { get {return etat;} set{ etat = value;} }
         
-        public char unPion(){
-            return 'O';
-        }
+
         //renvoie vrai si le pion est mangé.
         public bool EstMange(){
             return this.etat == 0 ? true : false;  
@@ -30,34 +27,5 @@ namespace Dames {
                 etat = 0;
             }
         }
-
-
-        // partie de yoann 
-
-        //les variables 
-		public enum Case { XXXX, rien, pion, test, Dame }
-		Regex numSeul = new Regex(@"^[1-4]$");
-		public Case type;
-	//	public Joueur Joueur;
-		//public Position Pos;
-
-		//Constructeurs
-		// public Pion(Case p, Position Posp)
-		// {
-		// 	type = p;
-		// 	Pos = Posp;
-
-		// }
-		public Pion()
-		{
-			type = Case.XXXX;
-		}
-
-		public Pion(Case p)
-		{
-			type = p;
-
-
-		}
     }
 }

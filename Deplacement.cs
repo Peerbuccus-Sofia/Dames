@@ -1,10 +1,11 @@
 using System;
+using System.Collections;
 namespace Dames
 {
     class Deplacement
     {
         static Plateau plateau = Plateau.getInstance();
-
+        static Partie jeu = Partie.getInstance();
         //public Case lacase;
         public void deplacement(){}
         public int ligne(){
@@ -40,7 +41,6 @@ namespace Dames
             return j;
         }
         public void selectPion(Joueur joueur){
-            //do {
                 int ligne = this.ligne();
                 int colonne = this.colonne();
                 //char lacase = plateau.leplateau[ligne,colonne];
@@ -60,7 +60,6 @@ namespace Dames
                                 ligne = this.ligne();
                                 colonne = this.colonne();
                             }while((ligne<5 && ligne%2 !=0 && colonne%2 !=0) || (ligne< 5 && ligne%2 == 0 && colonne%2 ==0));
-
                         }
                     }
     
@@ -82,16 +81,42 @@ namespace Dames
                 }
                 else {
                     do {
-                        Console.WriteLine($"La cellule d'indice [{ligne},{colonne}] est vide");  
+                        Console.WriteLine($"La cellule d'indice [{ligne},{colonne}] est vide ou le pion appartient à votre adversaire.");  
                         ligne = this.ligne();
                         colonne = this.colonne();
-                        }while(plateau.Occuper(ligne, colonne, joueur).Equals(false));              
+                    }while(plateau.Occuper(ligne, colonne, joueur).Equals(false));              
                 }
         }
 
-        public  bool choix(int positionInit, int positionDest){
-            return true;
+        //liste de deplacement pour le joueur B
+        public ArrayList listeDeplacement(int ligne, int colonne, Plateau plateau){
+            ArrayList lesdeplacement = new ArrayList();
+            //cellule choisis par le joueur
+            int i= plateau.leplateau[ligne,colonne];
+            if(colonne == 0){
+                do {
+                    colonne =+ 1;
+                    if(ligne-1 == ' ' && colonne == ' '){
+                        i = plateau.leplateau[ligne-1,colonne];
+                    }
+                    lesdeplacement.Add(i);
+                }while(ligne-1 != ' ' && colonne != ' ');
+                
+            }
+            else {
+                colonne =-1 ;
+                 
+            }
+           
+            return lesdeplacement;
         }
+           
+        
+
+            
+        // public  int choix(int positionInit, int positionDest){
+            
+        // }
 
     }
 }

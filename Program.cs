@@ -10,7 +10,7 @@ namespace Dames
             Plateau plateau = Plateau.getInstance();
             Joueur joueur = new Joueur();
             Deplacement deplacement = new Deplacement();
-            Pion pion = new Pion();
+            //Pion pion = new Pion();
 
             
                 jeu.Ready();

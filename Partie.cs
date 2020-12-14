@@ -37,9 +37,8 @@ namespace Dames {
             try {
                 if(rep == "oui"){
                     this.initialiser = 1;
-                    Plateau damier = new Plateau();
                     Console.WriteLine("Commencer une partie ! ");
-                    damier.AfficherDamier(this);
+                    plateau.AfficherDamier(this);
                 }        
                 return rep;
             }

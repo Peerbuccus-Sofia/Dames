@@ -1,7 +1,7 @@
 using System; 
 
 namespace Dames {
-    class Dames : Pion
+    class Dame /*: Pion*/ 
 	{
         //fonctions 
         Joueur joueur = new Joueur();
